@@ -35,11 +35,11 @@ jobs:
         npm run build --if-present
     - name: Deploy to ajaymore.github.io
       run: |
-        git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/ajaymore.github.io target
+        git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/ajaymore/ajaymore.github.io target
         rm target
         copy source\build target
         git add target
-        git commit -m "Automatic publish from github.com/portfolio"
+        git commit -m "Automatic publish from github.com/ajaymore/portfolio"
         git push target master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
