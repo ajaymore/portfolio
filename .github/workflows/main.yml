@@ -31,10 +31,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Deploy to ajaymore.github.io
       run: |
+        git config --global user.email "mail@ajaymore.in"
+        git config --global user.name "Ajay More"
         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/ajaymore/ajaymore.github.io target
         rm -rf target/*
-        ls target
         cp -r blog/* target/
+        ls target
         git add target
         git commit -m "Automatic publish from github.com/ajaymore/portfolio"
         git push target master
