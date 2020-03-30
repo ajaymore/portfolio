@@ -29,16 +29,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
     - name: Deploy to ajaymore.github.io
       run: |
         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/ajaymore/ajaymore.github.io target
         rm -rf target/*
         ls target
-        cp build/* target/
+        cp -r blog/* target/
         git add target
         git commit -m "Automatic publish from github.com/ajaymore/portfolio"
         git push target master
