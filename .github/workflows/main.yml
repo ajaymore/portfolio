@@ -36,9 +36,9 @@ jobs:
         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/ajaymore/ajaymore.github.io target
         rm -rf target/*
         cp -r blog/* target/
-        ls target
-        git add target
+        cd target
+        git add .
         git commit -m "Automatic publish from github.com/ajaymore/portfolio"
-        git push target master
+        git push origin master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
