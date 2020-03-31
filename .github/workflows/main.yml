@@ -46,7 +46,7 @@ jobs:
         echo "${{ secrets.DEPLOY_PRIVATE_KEY }}"
         ssh-add - <<< "${{ secrets.DEPLOY_PRIVATE_KEY }}"
         git add .
-        git commit -m "Automatic publish from github.com/ajaymore/portfolio"
+        git commit -m "Automatic publishs from github.com/ajaymore/portfolio"
         git push origin master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
