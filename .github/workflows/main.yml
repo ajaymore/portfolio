@@ -31,17 +31,23 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Deploy to ajaymore.github.io
       run: |
+        git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/ajaymore/ajaymore.github.io target
+        rm -rf target/*
+        cp -r blog/* target/
+        cd target
         git config --global user.email "mail@ajaymore.in"
         git config --global user.name "Ajay More"
         eval `ssh-agent`
         mkdir -p ~/.ssh
         ssh-keyscan github.com >> ~/.ssh/known_hosts
-        echo "${{ secrets.DEPLOY_SECRET }}"
-        ssh-add - <<< "${{ secrets.DEPLOY_SECRET }}"
-        git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/ajaymore/ajaymore.github.io target
-        rm -rf target/*
-        cp -r blog/* target/
-        cd target
+        echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ls ~/.ssh
+        echo "${{ secrets.DEPLOY_PRIVATE_KEY }}"
+        ssh-add - <<< "${{ secrets.DEPLOY_PRIVATE_KEY }}"
         git add .
         git commit -m "Automatic publish from github.com/ajaymore/portfolio"
         git push origin master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }} 
