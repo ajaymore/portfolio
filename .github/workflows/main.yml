@@ -31,7 +31,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Deploy to ajaymore.github.io
       run: |
-        git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/ajaymore/ajaymore.github.io target
+        git clone git@github.com:ajaymore/ajaymore.github.io.git target
         rm -rf target/*
         cp -r blog/* target/
         cd target
