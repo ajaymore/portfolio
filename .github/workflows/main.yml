@@ -37,14 +37,13 @@ jobs:
         cd target
         git config --global user.email "mail@ajaymore.in"
         git config --global user.name "Ajay More"
-        eval `ssh-agent`
         mkdir -p ~/.ssh
+        eval `ssh-agent`
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ls ~/.ssh
-        echo "${{ secrets.DEPLOY_PRIVATE_KEY }}"
-        ssh-add - <<< "${{ secrets.DEPLOY_PRIVATE_KEY }}"
+        cat ~/.ssh/id_rsa
+        ssh-add ~/.ssh/id_rsa
         git add .
         git commit -m "Automatic publish from github.com/ajaymore/portfolio"
         git push origin master
