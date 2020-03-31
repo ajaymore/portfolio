@@ -1,11 +1,11 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'Ajay More',
+  tagline: 'FullStack Developer',
   url: 'https://ajaymore.github.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'ajaymore', // Usually your GitHub org/user name.
-  projectName: 'portfolio', // Usually your repo name.
+  projectName: 'ajaymore.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'My Site',
