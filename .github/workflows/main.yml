@@ -29,6 +29,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm run build --if-present
     - name: Deploy to ajaymore.github.io
       run: |
         mkdir -p ~/.ssh
@@ -39,13 +43,10 @@ jobs:
         ssh-add ~/.ssh/id_rsa
         git clone git@github.com:ajaymore/ajaymore.github.io.git target
         rm -rf target/*
-        cp -r blog/* target/
+        cp -r build/* target/
         cd target
         git config --global user.email "mail@ajaymore.in"
         git config --global user.name "Ajay More"
         git add .
         git commit -m "Automatic publish from github.com/ajaymore/portfolio"
         git push origin master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }} 
