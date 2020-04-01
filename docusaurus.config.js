@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Ajay More',
-  tagline: 'FullStack Developer',
+  tagline: 'Full Stack Developer',
   url: 'https://ajaymore.github.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -8,7 +8,7 @@ module.exports = {
   projectName: 'ajaymore.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: '@ajaymore',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg'
@@ -22,7 +22,7 @@ module.exports = {
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/ajaymore/',
           label: 'GitHub',
           position: 'right'
         }
@@ -31,32 +31,32 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Style Guide',
-              to: 'docs/doc1'
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2'
-            }
-          ]
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus'
-            }
-          ]
-        },
+        // {
+        //   title: 'Docs',
+        //   items: [
+        //     {
+        //       label: 'Style Guide',
+        //       to: 'docs/doc1'
+        //     },
+        //     {
+        //       label: 'Second Doc',
+        //       to: 'docs/doc2'
+        //     }
+        //   ]
+        // },
+        // {
+        //   title: 'Community',
+        //   items: [
+        //     {
+        //       label: 'Stack Overflow',
+        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus'
+        //     },
+        //     {
+        //       label: 'Discord',
+        //       href: 'https://discordapp.com/invite/docusaurus'
+        //     }
+        //   ]
+        // },
         {
           title: 'Social',
           items: [
@@ -66,16 +66,16 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus'
+              href: 'https://github.com/ajaymore/'
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus'
+              href: 'https://twitter.com/__ajaymore'
             }
           ]
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+      copyright: `Copyright © ${new Date().getFullYear()} Portfolio Built with Docusaurus.`
     }
   },
   presets: [
