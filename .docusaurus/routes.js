@@ -94,8 +94,20 @@ export default [
   
 },
 {
+  path: '/docs/docker',
+  component: ComponentCreator('/docs/docker'),
+  exact: true,
+  
+},
+{
   path: '/docs/mdx',
   component: ComponentCreator('/docs/mdx'),
+  exact: true,
+  
+},
+{
+  path: '/docs/shell',
+  component: ComponentCreator('/docs/shell'),
   exact: true,
   
 }],

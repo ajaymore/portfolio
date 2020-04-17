@@ -8,7 +8,7 @@
   "sidebar_label": "Cloud Server",
   "sidebar": "someSidebar",
   "next": {
-    "title": "Style Guide",
-    "permalink": "/docs/doc1"
+    "title": "Docker",
+    "permalink": "/docs/docker"
   }
 }

@@ -8,8 +8,8 @@
   "sidebar_label": "Style Guide",
   "sidebar": "someSidebar",
   "previous": {
-    "title": "Cloud Server Setup",
-    "permalink": "/docs/cloud-server"
+    "title": "Shell",
+    "permalink": "/docs/shell"
   },
   "next": {
     "title": "Document Number 2",

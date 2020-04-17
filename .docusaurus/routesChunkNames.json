@@ -98,8 +98,16 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-doc-3616-40c"
   },
+  "/docs/docker": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-docker-932-574"
+  },
   "/docs/mdx": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-mdxce-3-7d1"
+  },
+  "/docs/shell": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-shell-581-225"
   }
 }

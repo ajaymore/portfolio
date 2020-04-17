@@ -9,6 +9,16 @@
             "type": "link",
             "label": "Cloud Server",
             "href": "/docs/cloud-server"
+          },
+          {
+            "type": "link",
+            "label": "Docker",
+            "href": "/docs/docker"
+          },
+          {
+            "type": "link",
+            "label": "Shell",
+            "href": "/docs/shell"
           }
         ]
       },
@@ -51,6 +61,8 @@
     "/docs/doc1": "someSidebar",
     "/docs/doc2": "someSidebar",
     "/docs/doc3": "someSidebar",
-    "/docs/mdx": "someSidebar"
+    "/docs/docker": "someSidebar",
+    "/docs/mdx": "someSidebar",
+    "/docs/shell": "someSidebar"
   }
 }
