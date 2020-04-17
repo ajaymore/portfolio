@@ -7,8 +7,13 @@ sidebar_label: Shell
 ## Cleaning up node_modules
 
 ```bash
-# List contents of a folder
+# List size of a sub-folders
+du -sh */
+
+# List contents of current folder
 du -sh $PWD/*
-# Remove node_modules recursively
+
+
+# Cleaning up node_modules or any other big size folders
 find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +
 ```
