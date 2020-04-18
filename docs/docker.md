@@ -127,3 +127,23 @@ docker cp mycontainer:/foo.txt foo.txt
 docker cp src/. mycontainer:/target
 docker cp mycontainer:/src/. target
 ```
+
+## MongoDB backup & restore
+
+```
+# Local docker instance mongodump
+docker run --rm --link some-mongo -v $PWD/mongo-backup:/backup mongo \
+ bash -c 'mongodump --db corona_cases -u mongoadmin -p secret --authenticationDatabase admin --archive=/backup/corona_archive --host some-mongo:27017'
+
+# Local docker instance mongorestore
+docker run --rm --link some-mongo -v $PWD/mongo-backup:/backup mongo \
+ bash -c 'mongorestore --db corona_cases -u mongoadmin -p secret --authenticationDatabase admin --archive=/backup/corona_archive --host some-mongo:27017'
+
+# Remote instance mongodump
+docker run --rm -v $PWD/mongo-backup:/backup mongo:4.2.5 \
+ bash -c 'mongodump --db corona_cases_remote -u admin -p nREnSEovpWI7jvBZ --authenticationDatabase admin --archive=/backup/corona_archive --ssl --host inip-shard-00-00-ksqln.mongodb.net:27017,inip-shard-00-01-ksqln.mongodb.net:27017,inip-shard-00-02-ksqln.mongodb.net:27017'
+
+# Remote instance mongorestore
+docker run --rm -v $PWD/mongo-backup:/backup mongo:4.2.5 \
+    bash -c 'mongorestore -u admin -p nREnSEovpWI7jvBZ --authenticationDatabase admin --archive=/backup/corona_archive --ssl --host inip-shard-00-00-ksqln.mongodb.net:27017,inip-shard-00-01-ksqln.mongodb.net:27017,inip-shard-00-02-ksqln.mongodb.net:27017'
+```
