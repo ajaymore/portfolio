@@ -14,37 +14,37 @@ function Portfolio() {
       <div className="portfolio-ctn">
         {[
           {
-            img: 'cmca.png',
+            img: 'cmca.jpg',
             link: 'https://cmcaindia.web.app/',
             name: 'CMCA India',
           },
           {
-            img: 'cmca-ios.png',
+            img: 'cmca-ios.jpg',
             link: 'https://apps.apple.com/us/app/cmca/id1400966758',
             name: 'CMCA iOS App',
           },
           {
-            img: 'elections.png',
+            img: 'elections.jpg',
             link: 'https://apustudentelections.firebaseapp.com/',
             name: 'APU Student Elections',
           },
           {
-            img: 'i4pt0.png',
+            img: 'i4pt0.jpg',
             link: 'http://i4pt0.parallellearning.in/',
             name: 'Industry 4.0',
           },
           {
-            img: 'itforchange.png',
+            img: 'itforchange.jpg',
             link: 'https://itforchange.net/',
             name: 'IT For Change',
           },
           {
-            img: 'miigo.png',
+            img: 'miigo.jpg',
             link: 'http://miigo.in/',
             name: 'Miigo Innovations',
           },
           {
-            img: 'safety-games.png',
+            img: 'safety-games.jpg',
             link: 'https://safetyweek.web.app/jcb/kbsc-covid',
             name: 'Safety Games',
           },
