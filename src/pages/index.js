@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styles from './styles.module.css';
-import useWindowSize from '../hooks/useWindowsize';
+import useWindowSize from './useWindowSize';
 
 const calc = (x, y) => [
   -(y - 100 / 2) / 15,
