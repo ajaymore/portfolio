@@ -4,7 +4,6 @@ module.exports = {
       'cloud-server',
       'docker',
       'shell',
-      'languages',
       'rnative-android',
       'rnative-ios',
       'ubuntu',
