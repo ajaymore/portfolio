@@ -29,3 +29,11 @@
   grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
   grid-gap: 16px;
 }
+
+.portfolio-ctn {
+  background-color: #f1f8e9;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 32px;
+}
