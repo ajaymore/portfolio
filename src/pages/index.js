@@ -22,7 +22,12 @@ function TechItem({ logo, title }) {
     config: { mass: 5, tension: 350, friction: 40 },
   }));
   const [hover, setHover] = useState(false);
-  const opacityProp = useSpring({ opacity: hover ? 1 : 0 });
+  const textProps = useSpring({
+    scale: hover ? 1 : 0,
+    // config: {
+    //   duration: 2000,
+    // },
+  });
 
   return (
     <animated.div
@@ -45,14 +50,13 @@ function TechItem({ logo, title }) {
       <img style={{}} src={logo} alt="bg" />
       <animated.p
         style={{
-          ...opacityProp,
-          height: 50,
+          transform: textProps.scale.interpolate((s) => `scale(${s})`),
           textAlign: 'center',
-          fontSize: 22,
+          fontSize: 14,
           position: 'absolute',
           width: '100%',
           left: 0,
-          bottom: 0,
+          top: 0,
           margin: 0,
           background: 'rgba(0,0,0,0.5)',
           color: '#fff',
@@ -88,7 +92,7 @@ function Home() {
               )}
               to={useBaseUrl('docs/cloud-server')}
             >
-              Get Started
+              Documentation
             </Link>
           </div>
         </div>
