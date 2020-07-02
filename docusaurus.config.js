@@ -11,22 +11,23 @@ module.exports = {
       title: '@ajaymore',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg'
+        src: 'img/logo.svg',
       },
       links: [
         {
-          to: 'docs/doc1',
+          to: 'docs/cloud-server',
           activeBasePath: 'docs',
           label: 'Docs',
-          position: 'left'
+          position: 'left',
         },
         { to: 'blog', label: 'Blog', position: 'left' },
+        { to: 'portfolio', label: 'Portfolio', position: 'left' },
         {
           href: 'https://github.com/ajaymore/',
           label: 'GitHub',
-          position: 'right'
-        }
-      ]
+          position: 'right',
+        },
+      ],
     },
     footer: {
       style: 'dark',
@@ -62,21 +63,21 @@ module.exports = {
           items: [
             {
               label: 'Blog',
-              to: 'blog'
+              to: 'blog',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/ajaymore/'
+              href: 'https://github.com/ajaymore/',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/__ajaymore'
-            }
-          ]
-        }
+              href: 'https://twitter.com/__ajaymore',
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Portfolio Built with Docusaurus.`
-    }
+      copyright: `Copyright © ${new Date().getFullYear()} Portfolio Built with Docusaurus.`,
+    },
   },
   presets: [
     [
@@ -84,12 +85,13 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/'
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css')
-        }
-      }
-    ]
-  ]
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
 };

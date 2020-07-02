@@ -131,19 +131,24 @@ docker cp mycontainer:/src/. target
 ## MongoDB backup & restore
 
 ```
+docker run -d -p 27018:27017 --name some-mongo \
+    -e MONGO_INITDB_ROOT_USERNAME=mongoadmin \
+    -e MONGO_INITDB_ROOT_PASSWORD=secret \
+    mongo
+
 # Local docker instance mongodump
 docker run --rm --link some-mongo -v $PWD/mongo-backup:/backup mongo \
- bash -c 'mongodump --db corona_cases -u mongoadmin -p secret --authenticationDatabase admin --archive=/backup/corona_archive --host some-mongo:27017'
+ bash -c 'mongodump --db programming -u mongoadmin -p secret --authenticationDatabase admin --out /backup --host some-mongo:27017'
 
 # Local docker instance mongorestore
 docker run --rm --link some-mongo -v $PWD/mongo-backup:/backup mongo \
- bash -c 'mongorestore --db corona_cases -u mongoadmin -p secret --authenticationDatabase admin --archive=/backup/corona_archive --host some-mongo:27017'
+ bash -c 'mongorestore --db programming_new -u mongoadmin -p secret --authenticationDatabase admin /backup/programming --host some-mongo:27017'
 
 # Remote instance mongodump
 docker run --rm -v $PWD/mongo-backup:/backup mongo:4.2.5 \
- bash -c 'mongodump --db corona_cases_remote -u admin -p nREnSEovpWI7jvBZ --authenticationDatabase admin --archive=/backup/corona_archive --ssl --host inip-shard-00-00-ksqln.mongodb.net:27017,inip-shard-00-01-ksqln.mongodb.net:27017,inip-shard-00-02-ksqln.mongodb.net:27017'
+ bash -c 'mongodump --db programming_remote -u admin -p nREnSEovpWI7jvBZ --authenticationDatabase admin --out /backup --ssl --host inip-shard-00-00-ksqln.mongodb.net:27017,inip-shard-00-01-ksqln.mongodb.net:27017,inip-shard-00-02-ksqln.mongodb.net:27017'
 
 # Remote instance mongorestore
 docker run --rm -v $PWD/mongo-backup:/backup mongo:4.2.5 \
-    bash -c 'mongorestore -u admin -p nREnSEovpWI7jvBZ --authenticationDatabase admin --archive=/backup/corona_archive --ssl --host inip-shard-00-00-ksqln.mongodb.net:27017,inip-shard-00-01-ksqln.mongodb.net:27017,inip-shard-00-02-ksqln.mongodb.net:27017'
+    bash -c 'mongorestore --db programming_remote -u admin -p nREnSEovpWI7jvBZ --authenticationDatabase admin /backup/programming --ssl --host inip-shard-0/inip-shard-00-00-ksqln.mongodb.net:27017,inip-shard-00-01-ksqln.mongodb.net:27017,inip-shard-00-02-ksqln.mongodb.net:27017'
 ```

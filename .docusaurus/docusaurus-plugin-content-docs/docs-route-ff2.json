@@ -2,8 +2,9 @@
   "docsSidebars": {
     "someSidebar": [
       {
+        "collapsed": true,
         "type": "category",
-        "label": "Deployment",
+        "label": "Development",
         "items": [
           {
             "type": "link",
@@ -19,10 +20,36 @@
             "type": "link",
             "label": "Shell",
             "href": "/docs/shell"
+          },
+          {
+            "type": "link",
+            "label": "Languages",
+            "href": "/docs/languages"
+          },
+          {
+            "type": "link",
+            "label": "Android",
+            "href": "/docs/rnative-android"
+          },
+          {
+            "type": "link",
+            "label": "iOS",
+            "href": "/docs/rnative-ios"
+          },
+          {
+            "type": "link",
+            "label": "Ubuntu",
+            "href": "/docs/ubuntu"
+          },
+          {
+            "type": "link",
+            "label": "Fedora",
+            "href": "/docs/fedora"
           }
         ]
       },
       {
+        "collapsed": true,
         "type": "category",
         "label": "Docusaurus",
         "items": [
@@ -30,27 +57,6 @@
             "type": "link",
             "label": "Style Guide",
             "href": "/docs/doc1"
-          },
-          {
-            "type": "link",
-            "label": "Document Number 2",
-            "href": "/docs/doc2"
-          },
-          {
-            "type": "link",
-            "label": "This is Document Number 3",
-            "href": "/docs/doc3"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "Features",
-        "items": [
-          {
-            "type": "link",
-            "label": "Powered by MDX",
-            "href": "/docs/mdx"
           }
         ]
       }
@@ -59,10 +65,12 @@
   "permalinkToSidebar": {
     "/docs/cloud-server": "someSidebar",
     "/docs/doc1": "someSidebar",
-    "/docs/doc2": "someSidebar",
-    "/docs/doc3": "someSidebar",
     "/docs/docker": "someSidebar",
-    "/docs/mdx": "someSidebar",
-    "/docs/shell": "someSidebar"
+    "/docs/fedora": "someSidebar",
+    "/docs/languages": "someSidebar",
+    "/docs/rnative-android": "someSidebar",
+    "/docs/rnative-ios": "someSidebar",
+    "/docs/shell": "someSidebar",
+    "/docs/ubuntu": "someSidebar"
   }
 }

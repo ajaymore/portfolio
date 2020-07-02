@@ -1,7 +1,8 @@
 {
   "id": "docker",
+  "isDocsHomePage": false,
   "title": "Docker",
-  "description": "## Basics",
+  "description": "Basics",
   "source": "@site/docs/docker.md",
   "permalink": "/docs/docker",
   "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/docker.md",

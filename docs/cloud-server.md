@@ -127,3 +127,23 @@ scp -i ~/.ssh/test_cloud_rsa -r $PWD/image-folder ubuntu@server-ip:/home/ubuntu/
 # Local folder FROM the server
 scp -i ~/.ssh/test_cloud_rsa -r ubuntu@server-ip:/home/ubuntu/image-folder $PWD/image-folder-copy
 ```
+
+### Squid Proxy
+```
+sudo apt install squid apache2-utils
+
+# Edit /etc/squid/squid.conf http_access to allow all
+
+# Password
+touch /etc/squid/passwd
+htpasswd /etc/squid/passwd user1
+
+# Edit /etc/squid/squid.conf 
+auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd
+auth_param basic realm proxy
+acl authenticated proxy_auth REQUIRED
+http_access allow authenticated
+http_port 3128
+
+service squid restart
+```

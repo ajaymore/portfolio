@@ -1,7 +1,15 @@
 module.exports = {
   someSidebar: {
-    Deployment: ['cloud-server', 'docker', 'shell'],
-    Docusaurus: ['doc1', 'doc2', 'doc3'],
-    Features: ['mdx'],
+    Development: [
+      'cloud-server',
+      'docker',
+      'shell',
+      'languages',
+      'rnative-android',
+      'rnative-ios',
+      'ubuntu',
+      'fedora',
+    ],
+    Docusaurus: ['doc1'],
   },
 };

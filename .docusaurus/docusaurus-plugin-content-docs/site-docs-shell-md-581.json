@@ -1,7 +1,8 @@
 {
   "id": "shell",
+  "isDocsHomePage": false,
   "title": "Shell",
-  "description": "## Cleaning up node_modules",
+  "description": "Cleaning up node_modules",
   "source": "@site/docs/shell.md",
   "permalink": "/docs/shell",
   "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/shell.md",
@@ -12,7 +13,7 @@
     "permalink": "/docs/docker"
   },
   "next": {
-    "title": "Style Guide",
-    "permalink": "/docs/doc1"
+    "title": "Languages",
+    "permalink": "/docs/languages"
   }
 }

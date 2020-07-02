@@ -1,7 +1,8 @@
 {
   "id": "cloud-server",
+  "isDocsHomePage": false,
   "title": "Cloud Server Setup",
-  "description": "## Get SSH public Key",
+  "description": "Get SSH public Key",
   "source": "@site/docs/cloud-server.md",
   "permalink": "/docs/cloud-server",
   "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/cloud-server.md",

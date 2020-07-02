@@ -1,0 +1,53 @@
+---
+id: languages
+title: Languages
+sidebar_label: Languages
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Doc from './docker.md';
+import TSBasics from './langs/ts/basics.md';
+import DartBasics from './langs/dart/basics.md';
+import JavaBasics from './langs/java/basics.md';
+import PythonBasics from './langs/python/basics.md';
+import RustBasics from './langs/rust/basics.md';
+import PHPBasics from './langs/php/basics.md';
+import VBABasics from './langs/vba/basics.md';
+
+## Data types
+
+<Tabs
+  defaultValue="typescript"
+  values={[
+    { label: 'Typescript', value: 'typescript' },
+    { label: 'Dart', value: 'dart' },
+    { label: 'Rust', value: 'rust' },
+    { label: 'Python', value: 'python' },
+    { label: 'PHP', value: 'php' },
+    { label: 'Java', value: 'java' },
+    { label: 'VBA', value: 'vba' },
+  ]}
+>
+  <TabItem value="typescript">
+    <TSBasics />
+  </TabItem>
+  <TabItem value="dart">
+    <DartBasics />
+  </TabItem>
+  <TabItem value="rust">
+    <RustBasics />
+  </TabItem>
+  <TabItem value="python">
+    <PythonBasics />
+  </TabItem>
+  <TabItem value="java">
+    <JavaBasics />
+  </TabItem>
+  <TabItem value="php">
+    <PHPBasics />
+  </TabItem>
+  <TabItem value="vba">
+    <VBABasics />
+  </TabItem>
+</Tabs>

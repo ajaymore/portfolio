@@ -11,20 +11,14 @@ export default [
   
 },
 {
+  path: '/__docusaurus/debug',
+  component: ComponentCreator('/__docusaurus/debug'),
+  exact: true,
+  
+},
+{
   path: '/blog',
   component: ComponentCreator('/blog'),
-  exact: true,
-  
-},
-{
-  path: '/blog/hello-world',
-  component: ComponentCreator('/blog/hello-world'),
-  exact: true,
-  
-},
-{
-  path: '/blog/hola',
-  component: ComponentCreator('/blog/hola'),
   exact: true,
   
 },
@@ -41,20 +35,8 @@ export default [
   
 },
 {
-  path: '/blog/tags/facebook',
-  component: ComponentCreator('/blog/tags/facebook'),
-  exact: true,
-  
-},
-{
-  path: '/blog/tags/hello',
-  component: ComponentCreator('/blog/tags/hello'),
-  exact: true,
-  
-},
-{
-  path: '/blog/tags/hola',
-  component: ComponentCreator('/blog/tags/hola'),
+  path: '/blog/tags/react',
+  component: ComponentCreator('/blog/tags/react'),
   exact: true,
   
 },
@@ -65,8 +47,14 @@ export default [
   
 },
 {
-  path: '/docs/:route',
-  component: ComponentCreator('/docs/:route'),
+  path: '/portfolio',
+  component: ComponentCreator('/portfolio'),
+  exact: true,
+  
+},
+{
+  path: '/docs',
+  component: ComponentCreator('/docs'),
   
   routes: [
 {
@@ -82,32 +70,104 @@ export default [
   
 },
 {
-  path: '/docs/doc2',
-  component: ComponentCreator('/docs/doc2'),
-  exact: true,
-  
-},
-{
-  path: '/docs/doc3',
-  component: ComponentCreator('/docs/doc3'),
-  exact: true,
-  
-},
-{
   path: '/docs/docker',
   component: ComponentCreator('/docs/docker'),
   exact: true,
   
 },
 {
-  path: '/docs/mdx',
-  component: ComponentCreator('/docs/mdx'),
+  path: '/docs/fedora',
+  component: ComponentCreator('/docs/fedora'),
+  exact: true,
+  
+},
+{
+  path: '/docs/flutter',
+  component: ComponentCreator('/docs/flutter'),
+  exact: true,
+  
+},
+{
+  path: '/docs/git',
+  component: ComponentCreator('/docs/git'),
+  exact: true,
+  
+},
+{
+  path: '/docs/langs/dart/basics',
+  component: ComponentCreator('/docs/langs/dart/basics'),
+  exact: true,
+  
+},
+{
+  path: '/docs/langs/java/basics',
+  component: ComponentCreator('/docs/langs/java/basics'),
+  exact: true,
+  
+},
+{
+  path: '/docs/langs/php/basics',
+  component: ComponentCreator('/docs/langs/php/basics'),
+  exact: true,
+  
+},
+{
+  path: '/docs/langs/python/basics',
+  component: ComponentCreator('/docs/langs/python/basics'),
+  exact: true,
+  
+},
+{
+  path: '/docs/langs/rust/basics',
+  component: ComponentCreator('/docs/langs/rust/basics'),
+  exact: true,
+  
+},
+{
+  path: '/docs/langs/ts/basics',
+  component: ComponentCreator('/docs/langs/ts/basics'),
+  exact: true,
+  
+},
+{
+  path: '/docs/langs/vba/basics',
+  component: ComponentCreator('/docs/langs/vba/basics'),
+  exact: true,
+  
+},
+{
+  path: '/docs/languages',
+  component: ComponentCreator('/docs/languages'),
+  exact: true,
+  
+},
+{
+  path: '/docs/rnative-android',
+  component: ComponentCreator('/docs/rnative-android'),
+  exact: true,
+  
+},
+{
+  path: '/docs/rnative-ios',
+  component: ComponentCreator('/docs/rnative-ios'),
   exact: true,
   
 },
 {
   path: '/docs/shell',
   component: ComponentCreator('/docs/shell'),
+  exact: true,
+  
+},
+{
+  path: '/docs/ubuntu',
+  component: ComponentCreator('/docs/ubuntu'),
+  exact: true,
+  
+},
+{
+  path: '/docs/wordpress',
+  component: ComponentCreator('/docs/wordpress'),
   exact: true,
   
 }],

@@ -11,7 +11,7 @@ export default {
       },
       "links": [
         {
-          "to": "docs/doc1",
+          "to": "docs/cloud-server",
           "activeBasePath": "docs",
           "label": "Docs",
           "position": "left"
@@ -19,6 +19,11 @@ export default {
         {
           "to": "blog",
           "label": "Blog",
+          "position": "left"
+        },
+        {
+          "to": "portfolio",
+          "label": "Portfolio",
           "position": "left"
         },
         {
