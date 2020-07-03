@@ -51,7 +51,7 @@ function Portfolio() {
         ].map((item) => (
           <div key={item.name}>
             <a href={item.link} target="_blank" rel="noreferrer">
-              <img src={useBaseUrl(`/static/img/${item.img}`)} alt={item.img} />
+              <img src={useBaseUrl(`/img/${item.img}`)} alt={item.img} />
               <p>{item.name}</p>
             </a>
           </div>
