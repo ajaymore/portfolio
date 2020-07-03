@@ -29,6 +29,11 @@ module.exports = {
         },
       ],
     },
+    algolia: {
+      apiKey: '9cc4ebe11550c80337e89fe47ec30bb2',
+      indexName: 'ajaymore',
+      algoliaOptions: {},
+    },
     footer: {
       style: 'dark',
       links: [
