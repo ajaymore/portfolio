@@ -77,7 +77,7 @@ function Home() {
 
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title="Home"
       description="Description will go into a meta tag in <head />"
     >
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
