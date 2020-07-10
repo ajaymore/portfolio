@@ -8,6 +8,7 @@ module.exports = {
       'rnative-ios',
       'ubuntu',
       'fedora',
+      'languages',
     ],
     Docusaurus: ['doc1'],
   },
